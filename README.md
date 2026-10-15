@@ -149,13 +149,25 @@ El margen bruto cayó **5.09%** en 2017 (de 13.43% a 12.74%). Las regiones Centr
 ## 📁 Estructura del repositorio
 
 ```
-📦 nombre-del-repositorio
+📦 superstore_analysis_and_forecast
 ├── 📂 data
-│   ├── store_data.csv
-│   ├── 2014-2017_summary.csv
-│   └── 2014-2017_summary(monthly).csv
+│   ├── 📂 data_raw
+│   |    └── store_data.csv
+│   └── 📂 results
+|        ├── 2014-2017_summary(monthly).csv
+|        ├── 2014-2017_summary.csv
+|        ├── discount_product.csv
+|        ├── margins_product.csv
+|        ├── margins_region.csv
+|        ├── margins_subcategory.csv
+|        ├── results_category.csv
+|        ├── results_region.csv
+|        └── results_region.csv
 ├── 📂 sql
-│   └── nombre_del_script.sql
+│   ├── resumen_global.sql
+|   ├── resumen_rentabilidad.sql
+|   ├── resumen_segmentado.sql
+|   └── validacion.sql
 ├── 📂 notebooks
 │   └── superstore_analysis_and_forecast.ipynb
 ├── 📄 README.md
@@ -168,7 +180,7 @@ El margen bruto cayó **5.09%** en 2017 (de 13.43% a 12.74%). Las regiones Centr
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   git clone [https://github.com/alexisjmz88/superstore_analysis_and_forecast.git]
    ```
 2. Instala las dependencias:
    ```bash

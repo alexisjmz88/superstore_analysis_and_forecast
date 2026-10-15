@@ -118,7 +118,7 @@ El margen bruto cayó **5.09%** en 2017 (de 13.43% a 12.74%). Las regiones Centr
 1. Mantener temporalmente los productos de alta demanda con márgenes negativos y someterlos a una revisión de precios y estructura de costos, ya que su descontinuación implicaría una pérdida significativa de ventas. Determinar si el problema es costo unitario elevado o precio insuficiente, y actuar con ajustes de precio, renegociación de costos o mejoras operativas.
 2. Evaluar individualmente los productos que sigan con rentabilidad negativa tras estas medidas: conservarlos por su contribución estratégica, reducir su participación o descontinuarlos.
 
-**Pronóstico de ingresos**
+**Modelos de pronóstico**
 
 | Modelo | MAE | RMSE | MAPE |
 |--------|----:|-----:|-----:|
@@ -129,7 +129,40 @@ El margen bruto cayó **5.09%** en 2017 (de 13.43% a 12.74%). Las regiones Centr
 | SARIMA(1,0,1)(0,0,1)₁₂ | 61,410.18 | 63,272.01 | 123.52% |
 
 - El **ETS aditivo** obtuvo los menores errores absolutos y se seleccionó como modelo final. Los modelos SARIMA, pese a dejar residuos sin autocorrelación (Ljung-Box), no superaron a los ETS fuera de muestra.
+
+**Pronóstico de ingresos mensual**
+
+| Mes | Ingreso pronosticado |
+| --- | ---: |
+| 2018-01-01 | 49691.584907 |
+| 2018-02-01 | 41836.947430 |
+| 2018-03-01 | 74880.052264 |
+| 2018-04-01 | 61539.961431 |
+| 2018-05-01 | 68503.507548 |
+| 2018-06-01 | 65399.980241 |
+| 2018-07-01 | 67081.660762 |
+| 2018-08-01 | 66682.553451 |
+| 2018-09-01 | 108143.478601 |
+| 2018-10-01 | 77833.129499 |
+| 2018-11-01 | 115974.936672 |
+| 2018-12-01 | 117400.262337 |
+
+- Según muestra el pronóstico, se espera un patrón estacional similar a los años previos a lo largo del año 2018, con un total de ventas esperado de $914,968.06
+- En los meses correspondientes al tercer trimestre, se muestra un comportamiento muy estable y sin volatilidad, aunque hay que recordar que el modelo actual tiene dificultades para pronosticar estos periodos fuera de muestra.
+- En cuanto a los meses de más alta demanda, se espera que se mantenga el crecimiento de ventas YoY en el mes de Septiembre. Sin embargo, el mes de Noviembre muestra una expectativa a la baja derivado de la actual tendencia que se ha experimentado en los últimos cuatro años, aunque en el mes de Diciembre el pronóstico apunta a que no se experimentará una caída en ventas como se acostumbra.
+
+**Pronóstico de ingresos anual**
+
+| year | total_revenue | YoY% |
+| ---: | ---: | ---: |
+| 2014 | 484247.4981 | NaN |
+| 2015 | 470532.5090 | -2.832227 |
+| 2016 | 609205.5980 | 29.471521 |
+| 2017 | 733215.2552 | 20.355962 |
+| 2018 | 914968.0600 | 24.788465 |
+
 - **Ingresos pronosticados 2018: $914,968.06**, un crecimiento de **24.79%** frente a 2017, con patrón estacional similar al de años previos: inicio de año bajo y máximos en septiembre, noviembre y diciembre.
+- El crecimiento pronosticado es superior al ritmo de crecimiento experimentado en 2017, pero menor al crecimiento record de 2016.
 
 ---
 
